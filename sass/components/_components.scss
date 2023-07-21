@@ -87,3 +87,14 @@
 .logo {
   width: 3rem;
 }
+
+.tutorialCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.TikTok {
+  justify-content: space-evenly;
+}

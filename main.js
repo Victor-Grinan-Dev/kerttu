@@ -1,19 +1,38 @@
+const urlStart = "https://www.youtube.com/embed/";
 const tutorialsData = [
   {
-    source: "https://www.youtube.com/embed/y3r33AZhUvw",
-    caption: "Caption for tutorial 1",
+    source: "mjiJZlHQZEs",
+    caption: "Meikkaamisen alkeet - Miia Ezen",
   },
   {
-    source: "https://www.youtube.com/embed/W6vx6dqCZXg",
-    caption: "Caption for tutorial 2",
+    source: "IGPZae203vA",
+    caption: "Meikkaamisen alkeet 2 - Miia Ezen",
   },
   {
-    source: "https://www.youtube.com/embed/A77Xi2pE7Lg",
-    caption: "Caption for tutorial 3",
+    source: "mj7kd8rW2Wg",
+    caption: "SYKSYN 22 ARKIMEIKKI TUTORIAALI 🤎",
   },
   {
-    source: "https://www.youtube.com/embed/5VRkIaAkG2k",
-    caption: "Caption for tutorial 4",
+    source: "Sr2twSsPEDA",
+    caption: "Mun uudistettu arkimeikki",
+  },
+  {
+    source: "i8soat1tHS8",
+    caption: "ÄLÄ MEIKKAA NÄIN",
+  },
+];
+const tiktokLinks = [
+  {
+    url: "https://www.tiktok.com/@pinja.potasev?_t=8e9aIT1aG4J&_r=1",
+    title: "@pinja.potasev",
+  },
+  {
+    url: "https://www.tiktok.com/@aino.riipinen?_t=8e9aPMl6MQt&_r=1",
+    title: "@aino.riipinen",
+  },
+  {
+    url: "https://www.tiktok.com/@iammariaalexandra?_t=8e9aY0Pu3FT&_r=1",
+    title: "@iammariaalexandra",
   },
 ];
 const tutorialsSection = document.querySelector(".tutorials");
@@ -21,11 +40,11 @@ const copyright = document.querySelector(".footer__copyright");
 
 tutorialsData.forEach((tutorial) => {
   tutorialsSection.innerHTML += `
-  <div>
+  <div class="tutorialCard">
   <iframe
     width="280"
     height="150"
-    src=${tutorial.source}
+    src=${urlStart + tutorial.source}
     title="YouTube video player"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -35,6 +54,13 @@ tutorialsData.forEach((tutorial) => {
   <p>${tutorial.caption}</p>
   </div>
   `;
+});
+const tikTokSection = document.querySelector(".tiktokLinks");
+tiktokLinks.forEach((link) => {
+  tikTokSection.innerHTML += `
+  <li>
+    <a href=${link.url}> ${link.title} </a>
+  </li>`;
 });
 
 /* copyrights */
