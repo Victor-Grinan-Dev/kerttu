@@ -65,4 +65,4 @@ tiktokLinks.forEach((link) => {
 
 /* copyrights */
 const year = new Date();
-copyright.innerHTML = `<p>CopyRights &copy; ${year.getFullYear()}</p>`;
+copyright.innerHTML = `<p>CopyRights &copy; Kerttu Pirskanen ${year.getFullYear()}</p>`;
